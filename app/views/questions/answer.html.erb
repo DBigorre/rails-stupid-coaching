@@ -1,0 +1,17 @@
+
+<h1> Stupid Coaching</h1>
+<div class="question"> 
+  <h2> <%= params[:form] %> </h2>
+  <p> <%= "__You" %> </p>
+</div>
+<div class="answer">
+  <% if params[:form] == "I am going to work" %>
+    <h2> <%= Great! %> </h2>
+  <% elsif params[:form].include?("?") %>
+    <h2> <%= "Silly question, get dressed and go to work!" %> </h2>
+  <% else %>
+    <h2> <%= "I don't care, get dressed and go to work!" %> </h2>
+  <% end %>
+  <p> <%= "__Your Coach" %> </p>
+</div>
+<%= link_to "Ask a new question", ask_path %>
